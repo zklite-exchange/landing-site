@@ -80,7 +80,7 @@ const mobileOptions = [
 export const Header: React.FC<HeaderProps> = (props) => {
   //const { children } = props;
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
+  const theme = 'dark';
   const { locale } = useRouter();
   const { t, i18n } = useTranslation([COMMON_TNS]);
 
@@ -106,9 +106,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
     setMobileSupportMenu(mobileSupport);
   }, [locale, t]);
 
-  const switchTheme = () => {
-    if (isMounted) setTheme(theme === "light" ? "dark" : "light");
-  };
+  // const switchTheme = () => {
+  //   if (isMounted) setTheme(theme === "light" ? "dark" : "light");
+  // };
 
   const handleSelectLang = (option: any) => {
     //TODO as hook
@@ -287,19 +287,19 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   </Transition>
                 </div>
               </Listbox>
-              <div className="md:px-4">
-                {theme === "dark" ? (
-                  <SunIcon
-                    className="w-5 h-5 text-white cursor-pointer"
-                    onClick={switchTheme}
-                  />
-                ) : (
-                  <MoonIcon
-                    className="w-5 h-5 cursor-pointer"
-                    onClick={switchTheme}
-                  />
-                )}
-              </div>
+              {/*<div className="md:px-4">*/}
+              {/*  {theme === "dark" ? (*/}
+              {/*    <SunIcon*/}
+              {/*      className="w-5 h-5 text-white cursor-pointer"*/}
+              {/*      onClick={switchTheme}*/}
+              {/*    />*/}
+              {/*  ) : (*/}
+              {/*    <MoonIcon*/}
+              {/*      className="w-5 h-5 cursor-pointer"*/}
+              {/*      onClick={switchTheme}*/}
+              {/*    />*/}
+              {/*  )}*/}
+              {/*</div>*/}
             </div>
 
             <div>
