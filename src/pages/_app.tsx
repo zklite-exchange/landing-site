@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"
+      forcedTheme="dark"
       enableSystem={false}
       enableColorScheme={false}
     >
