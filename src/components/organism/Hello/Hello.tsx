@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 // import { useTheme } from "next-themes";
 // import { useRouter } from "next/router";
 import Button from "@/components/atomic/Button/Button";
-import PriceCard, { PriceCardTradingView } from "@/components/atomic/PriceCard/PriceCard";
+import { PriceCardTradingView } from "@/components/atomic/PriceCard/PriceCard";
 import classNames from "classnames";
 
 import styles from "./hello.module.css";
@@ -123,7 +123,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-1 2xl:left-38 xl:left-16 xl:block"
+            className="absolute top-1 2xl:left-38 xl:left-16 "
           >
             <PriceCardTradingView symbol="BTCUSD" />
           </div>
@@ -131,7 +131,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-1 right-1 xl:right-1 xl:block"
+            className="absolute top-1 right-1 xl:right-1"
           >
             <PriceCardTradingView symbol="AAVEUSD" />
           </div>
@@ -139,7 +139,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-52 2xl:left-44 xl:left-44 xl:block"
+            className="absolute top-52 2xl:left-44 xl:left-44"
           >
             <PriceCardTradingView symbol="DAIUSD" />
           </div>
@@ -147,7 +147,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-26 left-10 xl:left-10 xl:block"
+            className="absolute top-26 left-10 xl:left-10"
           >
             <PriceCardTradingView symbol="LINKUSD" />
           </div>
@@ -155,7 +155,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-22 2xl:right-1 xl:right-1 xl:block"
+            className="absolute top-22 2xl:right-1 xl:right-1"
           >
             <PriceCardTradingView symbol="BNBUSD" />
           </div>
@@ -163,7 +163,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute hidden top-52 2xl:right-44 xl:right-16 xl:block"
+            className="absolute top-52 2xl:right-44 xl:right-16"
           >
             <PriceCardTradingView symbol="ETHUSD" />
           </div>
@@ -171,7 +171,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           : <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden"
+            className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row"
           >
             <PriceCardTradingView symbol="BTCUSD" />
             <PriceCardTradingView symbol="ETHUSD" />
@@ -184,4 +184,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
   );
 };
 
-export default Hello;
+import dynamic from "next/dynamic";
+export default dynamic(() => Promise.resolve(Hello), {
+  ssr: false,
+});
