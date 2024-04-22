@@ -22,14 +22,14 @@ const Hello = ({ onClickRollupBtn }: props) => {
     <section
       className={classNames(
         styles.hello,
-        "relative xl:bg-[url('/assets/mascot2.png')] lg:bg-[url('/assets/mascot3.png')] bg-[url('/assets/mascot1.png')] bg-no-repeat xl:bg-right-bottom lg:bg-left-top md:bg-right-top 2xl:bg-40% xl:bg-50% lg:bg-30% md:bg-30% bg-50%"
+        "relative"
       )}
     >
       <p
         data-aos="fade-up"
         data-aos-duration="600"
         data-aos-once="false"
-        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-36 text-slate-900 dark:text-white xl:pt-52 md:text-6xl font-work "
+        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-36 text-slate-900 dark:text-white xl:pt-52 md:text-6xl font-work max-w-lg mx-auto"
       >
         {t("Join the Future of Trading")}
       </p>
@@ -38,7 +38,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
         data-aos="fade-up"
         data-aos-duration="600"
         data-aos-delay="300"
-        className="mx-12 mt-2 font-medium leading-normal text-center whitespace-pre-wrap md:text-lg md:mt-6 text-slate-800 dark:text-slate-200 md:mx-0 font-work"
+        className=" mt-2 font-medium leading-normal text-center whitespace-pre-wrap md:text-lg md:mt-6 text-slate-800 dark:text-slate-200 font-work max-w-lg mx-auto"
       >
         {t(
           "Zigzag is a native, easy-to-use, reliable, fully secure and low fee Decentralized Exchange built on ZK Rollups."
@@ -171,15 +171,16 @@ const Hello = ({ onClickRollupBtn }: props) => {
         data-aos-duration="600"
         className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden"
       >
-        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" />
+        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" className="w-64" />
         <PriceCard
           symbol="ZZ"
           name="zigzag-2"
           title="ZigZag"
           logo="/assets/logo.svg"
           fillColor="#04DBDA"
+          className="w-64"
         />
-        <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" />
+        <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" className="w-64" />
       </div>
     </section>
   );
