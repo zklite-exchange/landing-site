@@ -1,3 +1,6 @@
 .hello {
   min-height: 100vh;
+  @media (min-height: 900px) {
+    min-height: 85vh;
+  }
 }

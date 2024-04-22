@@ -34,7 +34,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
         data-aos="fade-up"
         data-aos-duration="600"
         data-aos-once="false"
-        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-36 text-slate-900 dark:text-white xl:pt-52 md:text-6xl font-work max-w-lg mx-auto"
+        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-36 text-slate-900 dark:text-white xl:pt-64 md:text-6xl font-work max-w-lg mx-auto"
       >
         {t("Join the Future of Trading")}
       </p>
@@ -123,7 +123,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-1 2xl:left-38 xl:left-16 "
+            className="absolute top-32 2xl:left-38 xl:left-16 "
           >
             <PriceCardTradingView symbol="BTCUSD" />
           </div>
@@ -131,7 +131,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-1 right-1 xl:right-1"
+            className="absolute top-32 right-1 xl:right-1"
           >
             <PriceCardTradingView symbol="AAVEUSD" />
           </div>
@@ -139,7 +139,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-52 2xl:left-44 xl:left-44"
+            className="absolute top-80 2xl:left-44 xl:left-44"
           >
             <PriceCardTradingView symbol="DAIUSD" />
           </div>
@@ -147,7 +147,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-26 left-10 xl:left-10"
+            className="absolute  left-10 xl:left-10"
           >
             <PriceCardTradingView symbol="LINKUSD" />
           </div>
@@ -155,7 +155,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-22 2xl:right-1 xl:right-1"
+            className="absolute 2xl:right-1 xl:right-1"
           >
             <PriceCardTradingView symbol="BNBUSD" />
           </div>
@@ -163,7 +163,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           <div
             data-aos="zoom-in"
             data-aos-duration="600"
-            className="absolute top-52 2xl:right-44 xl:right-16"
+            className="absolute top-96 2xl:right-44 xl:right-16"
           >
             <PriceCardTradingView symbol="ETHUSD" />
           </div>
