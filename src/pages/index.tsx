@@ -67,7 +67,7 @@ const Homepage: NextPage = () => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
       <Header />
-      <main className="container mx-auto">
+      <main className="container mx-auto px-2">
         <Hello onClickRollupBtn={onClickRollupBtn} />
         <Benefits />
         <GetStarted />

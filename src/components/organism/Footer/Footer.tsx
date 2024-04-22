@@ -79,7 +79,7 @@ const Footer = () => {
   const { t } = useTranslation([COMMON_TNS]);
   const { theme } = useTheme();
   return (
-    <div className="md:px-8">
+    <div className="px-2 md:px-8">
       <div
         className={classNames(
           styles.footer,
