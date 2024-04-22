@@ -60,8 +60,8 @@ const Homepage: NextPage = () => {
       }
     >
       <Head>
-        <title>ZigZag</title>
-        <meta name="description" content="ZigZag website" />
+        <title>zkLite Exchange</title>
+        <meta name="description" content="zkLite Exchange website" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>

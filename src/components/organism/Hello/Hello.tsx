@@ -57,7 +57,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
         className="flex flex-col items-center justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row"
       >
         <a
-          href="https://trade.zigzag.exchange/"
+          href="https://trade.zklite.io/"
           rel="noopener noreferrer"
           target="_blank"
           className="!hover:no-underline"
@@ -69,19 +69,19 @@ const Hello = ({ onClickRollupBtn }: props) => {
             {t("Trade on zkSync Lite")}
           </Button>
         </a>
-         <a
-          href="https://zap.zigzag.exchange/"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="!hover:no-underline"
-        >
-          <Button
-            className="px-2 py-2.5 text-base font-semibold font-work md:w-100 hover:no-underline"
-            type="gradient"
-          >
-            {t("Cross chain Swap with ZAP")}
-          </Button>
-        </a>
+        {/* <a*/}
+        {/*  href="https://zap.zigzag.exchange/"*/}
+        {/*  rel="noopener noreferrer"*/}
+        {/*  target="_blank"*/}
+        {/*  className="!hover:no-underline"*/}
+        {/*>*/}
+        {/*  <Button*/}
+        {/*    className="px-2 py-2.5 text-base font-semibold font-work md:w-100 hover:no-underline"*/}
+        {/*    type="gradient"*/}
+        {/*  >*/}
+        {/*    {t("Cross chain Swap with ZAP")}*/}
+        {/*  </Button>*/}
+        {/*</a>*/}
         {/* <a
           href="https://arbitrum.zigzag.exchange/"
           rel="noopener noreferrer"
