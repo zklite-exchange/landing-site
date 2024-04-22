@@ -158,14 +158,14 @@ export const Header: React.FC<HeaderProps> = (props) => {
             />
             <LinkText
               href="https://blog.zigzag.exchange/"
-              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 lg:ml-0 xl:ml-7 font-work lg:block hover:underline hover:underline-offset-2"
+              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 lg:ml-0 xl:ml-7 font-work lg:block hover:underline hover:underline-offset-2"
               target="_blank"
             >
               {t("Blog")}
             </LinkText>
             <LinkText
               href="/contact"
-              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
+              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
             >
               {t("Contact")}
             </LinkText>
@@ -186,7 +186,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 target="_blank"
               >
                 <FaTwitter
-                  className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+                  className="cursor-pointer dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
                   size={20}
                 />
               </a>
@@ -196,7 +196,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 target="_blank"
               >
                 <FaGithub
-                  className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+                  className="cursor-pointer dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
                   size={20}
                 />
               </a>
@@ -206,7 +206,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 target="_blank"
               >
                 <FaDiscord
-                  className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+                  className="cursor-pointer dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
                   size={20}
                 />{" "}
               </a> 
@@ -217,7 +217,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 target="_blank"
               >
                 <FaTelegram
-                  className="cursor-pointer dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+                  className="cursor-pointer dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
                   size={20}
                 />
               </a>
@@ -225,7 +225,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
             <div className="flex items-center ml-2 mr-4 md:ml-6">
               <Listbox value={selected} onChange={handleSelectLang}>
                 <div className="relative mt-1">
-                  <Listbox.Button className="relative flex items-center w-full gap-2 py-[3px] pl-3 pr-8 text-sm font-semibold text-left cursor-pointer hover:text-primary-900 font-work dark:text-white-900 text-foreground400 ">
+                  <Listbox.Button className="relative flex items-center w-full gap-2 py-[3px] pl-3 pr-8 text-sm font-semibold dark:hover:text-amber-400 text-left cursor-pointer hover:text-primary-900 font-work dark:text-white-900 text-foreground400 ">
                     <Image
                       src={selected.icon}
                       alt={selected.name}

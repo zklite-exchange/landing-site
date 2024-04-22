@@ -64,7 +64,7 @@ const FAQ = React.forwardRef<any, props>(
               target="_blank"
               className="!hover:no-underline inline-block"
             >
-              <Button className="flex gap-1 py-2 mt-4 text-base font-semibold border-2 rounded-lg whitespace-nowrap dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+              <Button className="flex gap-1 py-2 mt-4 text-base font-semibold border-2 rounded-lg whitespace-nowrap  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
                 {t("Documentation")}
                 <HiOutlineExternalLink className="w-3 h-3" />
               </Button>
@@ -79,8 +79,8 @@ const FAQ = React.forwardRef<any, props>(
           >
             <Disclosure>
               {({ open }) => (
-                <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
+                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
                     {t("What is ZigZag?")}
                     {open ? (
                       <MinusIcon
@@ -131,11 +131,11 @@ const FAQ = React.forwardRef<any, props>(
           >
             <Disclosure>
               {() => (
-                <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
+                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
                     <button
                       onClick={setRollupOpen}
-                      className="flex items-center justify-between w-full text-xl font-semibold text-left font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+                      className="flex items-center justify-between w-full text-xl font-semibold text-left font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
                     >
                       {t("What are ZK Rollups?")}
                       {rollupOpen ? (
@@ -188,8 +188,8 @@ const FAQ = React.forwardRef<any, props>(
           >
             <Disclosure>
               {({ open }) => (
-                <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
+                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
                     {t("What is zkSync?")}
                     {open ? (
                       <MinusIcon
@@ -240,8 +240,8 @@ const FAQ = React.forwardRef<any, props>(
           >
             <Disclosure>
               {({ open }) => (
-                <div className="mt-5 text-left border-2 rounded-2xl dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work dark:hover:border-sky-400 hover:border-sky-500 border-slate-800 dark:border-slate-200 dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200">
+                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
+                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
                     {t("How can I start using ZigZag?")}
                     {open ? (
                       <MinusIcon

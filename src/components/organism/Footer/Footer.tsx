@@ -112,7 +112,7 @@ const Footer = () => {
           <div className="flex items-center gap-10 mt-7">
             <a
               href="https://twitter.com/ZigZagExchange"
-              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+              className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -120,7 +120,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/ZigZagExchange"
-              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+              className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -128,7 +128,7 @@ const Footer = () => {
             </a>
             <a
               href="https://discord.gg/znyRTSWTJQ"
-              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+              className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -136,7 +136,7 @@ const Footer = () => {
             </a> 
             <a
               href="https://t.me/zigzagexchange"
-              className=" text-base !font-light font-work dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200"
+              className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -155,7 +155,7 @@ const Footer = () => {
                   return (
                     <a
                       href={item.url}
-                      className=" text-base !font-normal dark:hover:text-sky-400 hover:text-sky-500 text-slate-800 dark:text-slate-200 font-work  hover:underline hover:underline-offset-4 "
+                      className=" text-base !font-normal dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 font-work  hover:underline hover:underline-offset-4 "
                       rel="noopener noreferrer"
                       target="_blank"
                       key={index}
