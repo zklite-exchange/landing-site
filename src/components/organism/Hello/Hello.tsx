@@ -6,18 +6,23 @@ import { useTranslation } from "react-i18next";
 // import { useTheme } from "next-themes";
 // import { useRouter } from "next/router";
 import Button from "@/components/atomic/Button/Button";
-import PriceCard from "@/components/atomic/PriceCard/PriceCard";
+import PriceCard, { PriceCardTradingView } from "@/components/atomic/PriceCard/PriceCard";
 import classNames from "classnames";
 
 import styles from "./hello.module.css";
+import { useMediaQuery } from "react-responsive";
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../../../tailwind.config'
 
 type props = {
   onClickRollupBtn?: () => void;
 };
-
+const fullConfig = resolveConfig(tailwindConfig as any)
 const Hello = ({ onClickRollupBtn }: props) => {
   const { t, i18n } = useTranslation([COMMON_TNS]);
-
+  const isXl = useMediaQuery({
+    query: `(min-width: ${fullConfig.theme.screens.xl})`,
+  })
   return (
     <section
       className={classNames(
@@ -112,76 +117,69 @@ const Hello = ({ onClickRollupBtn }: props) => {
         </a>
       </div> */}
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-1 2xl:left-38 xl:left-16 xl:block"
-      >
-        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A"/>
-      </div>
+      {
+        isXl
+          ? <>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-1 2xl:left-38 xl:left-16 xl:block"
+          >
+            <PriceCardTradingView symbol="BTCUSD" />
+          </div>
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-1 right-1 xl:right-1 xl:block"
-      >
-        <PriceCard symbol="AAVE" name="aave" fillColor="#A35FA4" />
-      </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-1 right-1 xl:right-1 xl:block"
+          >
+            <PriceCardTradingView symbol="AAVEUSD" />
+          </div>
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-52 2xl:left-44 xl:left-44 xl:block"
-      >
-        <PriceCard symbol="DAI" name="dai" fillColor="#F9AF1C" />
-      </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-52 2xl:left-44 xl:left-44 xl:block"
+          >
+            <PriceCardTradingView symbol="DAIUSD" />
+          </div>
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-26 left-10 xl:left-10 xl:block"
-      >
-        <PriceCard symbol="LINK" name="Chainlink" fillColor="#2A5ADA" />
-      </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-26 left-10 xl:left-10 xl:block"
+          >
+            <PriceCardTradingView symbol="LINKUSD" />
+          </div>
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-22 2xl:right-1 xl:right-1 xl:block"
-      >
-        <PriceCard
-          symbol="ZZ"
-          name="zigzag-2"
-          title="ZigZag"
-          logo="/assets/logo.svg"
-          fillColor="#04DBDA"
-        />
-      </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-22 2xl:right-1 xl:right-1 xl:block"
+          >
+            <PriceCardTradingView symbol="BNBUSD" />
+          </div>
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="absolute hidden top-52 2xl:right-44 xl:right-16 xl:block"
-      >
-        <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" />
-      </div>
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="absolute hidden top-52 2xl:right-44 xl:right-16 xl:block"
+          >
+            <PriceCardTradingView symbol="ETHUSD" />
+          </div>
+          </>
+          : <div
+            data-aos="zoom-in"
+            data-aos-duration="600"
+            className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden"
+          >
+            <PriceCardTradingView symbol="BTCUSD" />
+            <PriceCardTradingView symbol="ETHUSD" />
+            <PriceCardTradingView symbol="BNBUSD" />
+          </div>
+      }
 
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="600"
-        className="flex flex-col items-center justify-around gap-8 mt-16 md:gap-0 md:flex-row xl:hidden"
-      >
-        <PriceCard symbol="BTC" name="bitcoin" fillColor="#F7931A" className="w-64" />
-        <PriceCard
-          symbol="ZZ"
-          name="zigzag-2"
-          title="ZigZag"
-          logo="/assets/logo.svg"
-          fillColor="#04DBDA"
-          className="w-64"
-        />
-        <PriceCard symbol="ETH" name="ethereum" fillColor="#627EEA" className="w-64" />
-      </div>
+
     </section>
   );
 };

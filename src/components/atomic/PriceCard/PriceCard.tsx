@@ -4,6 +4,13 @@ import { useTheme } from "next-themes";
 import { VictoryLine } from "victory";
 import styles from "./priceCard.module.css";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const MiniChart = dynamic(
+  () => import("react-ts-tradingview-widgets").then((w) => w.MiniChart),
+  {
+    ssr: false,
+  }
+);
 
 type priceCardProps = {
   className?: string;
@@ -15,6 +22,23 @@ type priceCardProps = {
 };
 
 let cx = classNames.bind(styles);
+
+
+export const PriceCardTradingView = (props: {
+  symbol: string
+}) => <div className="w-64 rounded-xl shadow-xl">
+  <MiniChart
+    symbol={props.symbol}
+    isTransparent={true}
+    colorTheme="dark"
+    dateRange="1M"
+    autosize={true}
+    largeChartUrl={"https://trade.zklite.io"}
+    copyrightStyles={{ parent: { display: 'none'}}}
+    // @ts-ignore
+    noTimeScale={true}
+  ></MiniChart>
+</div>
 
 const PriceCard = ({
   className,
