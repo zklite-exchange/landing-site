@@ -54,7 +54,7 @@ const Homepage: NextPage = () => {
   return (
     <div
       className={
-        "dark:bg-[#0B1120] bg-slate-50 bg-80% bg-no-repeat bg-top" +
+        "dark:bg-[#061c21] bg-slate-50 bg-80% bg-no-repeat bg-top" +
         " " +
         styles.root
       }

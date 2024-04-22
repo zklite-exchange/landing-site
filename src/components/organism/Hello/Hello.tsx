@@ -34,7 +34,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
         data-aos="fade-up"
         data-aos-duration="600"
         data-aos-once="false"
-        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-36 text-slate-900 dark:text-white xl:pt-64 md:text-6xl font-work max-w-lg mx-auto"
+        className="text-4xl font-extrabold tracking-tight text-center whitespace-pre-wrap pt-32 text-slate-900 dark:text-white xl:pt-64 md:text-6xl font-work max-w-lg mx-auto"
       >
         {t("Join the Future of Trading")}
       </p>
@@ -63,7 +63,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
           className="!hover:no-underline"
         >
           <Button
-            className="px-2 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
+            className="px-2 py-2.5 text-base font-extrabold font-work md:w-100 hover:no-underline"
             type="gradient"
           >
             {t("Trade on zkSync Lite")}

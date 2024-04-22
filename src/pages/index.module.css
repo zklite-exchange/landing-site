@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   filter: blur(5rem);
-  opacity: 0.8;
+  opacity: 0.65;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 1024px) {
   .root:before {
-    background-position: top -10% center, right bottom;
+    background-position: top 0% center, right bottom;
     background-size: 110%, 250%;
     opacity: 0.8;
   }
@@ -34,9 +34,9 @@
 
 @media only screen and (max-width: 768px) {
   .root:before {
-    background-position: top -10% center, right bottom;
+    background-position: top 0% center, right bottom;
     background-size: 150%, 250%;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 }
 @media only screen and (max-width: 600px) {
