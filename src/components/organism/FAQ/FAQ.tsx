@@ -48,7 +48,7 @@ const FAQ = React.forwardRef<any, props>(
               components={{
                 1: (
                   <a
-                    href="https://discord.gg/znyRTSWTJQ"
+                    href="https://t.me/zklite_io"
                     className="text-[#0088cc] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -59,7 +59,7 @@ const FAQ = React.forwardRef<any, props>(
           </p>
           <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
             <a
-              href="https://docs.zigzag.exchange/"
+              href="https://docs.zklite.io/"
               rel="noopener noreferrer"
               target="_blank"
               className="!hover:no-underline inline-block"
