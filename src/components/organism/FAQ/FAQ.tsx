@@ -49,7 +49,7 @@ const FAQ = React.forwardRef<any, props>(
                 1: (
                   <a
                     href="https://t.me/zklite_io"
-                    className="text-[#0088cc] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
+                    className="text-[#0088cc] hover:text-amber-400 font-work font-medium hover:underline-offset-2 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"
                   />
@@ -77,7 +77,7 @@ const FAQ = React.forwardRef<any, props>(
             data-aos-duration="600"
             data-aos-delay="900"
           >
-            <Disclosure>
+            <Disclosure defaultOpen={true}>
               {({ open }) => (
                 <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
                   <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
@@ -124,184 +124,184 @@ const FAQ = React.forwardRef<any, props>(
               )}
             </Disclosure>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1100"
-          >
-            <Disclosure>
-              {() => (
-                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
-                    <button
-                      onClick={setRollupOpen}
-                      className="flex items-center justify-between w-full text-xl font-semibold text-left font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
-                    >
-                      {t("What are ZK Rollups?")}
-                      {rollupOpen ? (
-                        <MinusIcon
-                          className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                          aria-hidden="true"
-                        />
-                      ) : (
-                        <PlusIcon
-                          className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                          aria-hidden="true"
-                        />
-                      )}
-                    </button>
-                  </Disclosure.Button>
-                  <Transition
-                    show={rollupOpen}
-                    enter="transition duration-300 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-200 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                  >
-                    <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                      <Trans
-                        t={t}
-                        i18nKey="zk-rollups are one of the options"
-                        components={{
-                          1: (
-                            <a
-                              href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
-                              className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            />
-                          ),
-                        }}
-                      />
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1300"
-          >
-            <Disclosure>
-              {({ open }) => (
-                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
-                    {t("What is zkSync?")}
-                    {open ? (
-                      <MinusIcon
-                        className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <PlusIcon
-                        className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </Disclosure.Button>
-                  <Transition
-                    show={open}
-                    enter="transition duration-300 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-200 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                  >
-                    <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                      <Trans
-                        t={t}
-                        i18nKey="zksync is a trustless protocol"
-                        components={{
-                          1: (
-                            <a
-                              href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
-                              className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            />
-                          ),
-                        }}
-                      />
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="600"
-            data-aos-delay="1500"
-          >
-            <Disclosure>
-              {({ open }) => (
-                <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">
-                  <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">
-                    {t("How can I start using ZigZag?")}
-                    {open ? (
-                      <MinusIcon
-                        className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <PlusIcon
-                        className="p-1 border rounded-full border-foreground-400 w-7 h-7"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </Disclosure.Button>
-                  <Transition
-                    show={open}
-                    enter="transition duration-300 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-200 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
-                  >
-                    <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">
-                      <Trans
-                        t={t}
-                        i18nKey="To start using zigzag"
-                        components={{
-                          1: (
-                            <a
-                              href="https://twitter.com/zigzagkedar/status/1580249833352220673"
-                              className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            />
-                          ),
-                          2: (
-                            <a
-                              href="https://twitter.com/ZigZagExchange/status/1584945659664551936"
-                              className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            />
-                          ),
-                          3: (
-                            <a
-                              href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"
-                              className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"
-                              rel="noopener noreferrer"
-                              target="_blank"
-                            />
-                          ),
-                        }}
-                      />
-                      {/* {t("To start using zigzag")} */}
-                    </Disclosure.Panel>
-                  </Transition>
-                </div>
-              )}
-            </Disclosure>
-          </div>
+          {/*<div*/}
+          {/*  data-aos="fade-left"*/}
+          {/*  data-aos-duration="600"*/}
+          {/*  data-aos-delay="1100"*/}
+          {/*>*/}
+          {/*  <Disclosure>*/}
+          {/*    {() => (*/}
+          {/*      <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">*/}
+          {/*        <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">*/}
+          {/*          <button*/}
+          {/*            onClick={setRollupOpen}*/}
+          {/*            className="flex items-center justify-between w-full text-xl font-semibold text-left font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"*/}
+          {/*          >*/}
+          {/*            {t("What are ZK Rollups?")}*/}
+          {/*            {rollupOpen ? (*/}
+          {/*              <MinusIcon*/}
+          {/*                className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*                aria-hidden="true"*/}
+          {/*              />*/}
+          {/*            ) : (*/}
+          {/*              <PlusIcon*/}
+          {/*                className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*                aria-hidden="true"*/}
+          {/*              />*/}
+          {/*            )}*/}
+          {/*          </button>*/}
+          {/*        </Disclosure.Button>*/}
+          {/*        <Transition*/}
+          {/*          show={rollupOpen}*/}
+          {/*          enter="transition duration-300 ease-out"*/}
+          {/*          enterFrom="transform scale-95 opacity-0"*/}
+          {/*          enterTo="transform scale-100 opacity-100"*/}
+          {/*          leave="transition duration-200 ease-out"*/}
+          {/*          leaveFrom="transform scale-100 opacity-100"*/}
+          {/*          leaveTo="transform scale-95 opacity-0"*/}
+          {/*        >*/}
+          {/*          <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">*/}
+          {/*            <Trans*/}
+          {/*              t={t}*/}
+          {/*              i18nKey="zk-rollups are one of the options"*/}
+          {/*              components={{*/}
+          {/*                1: (*/}
+          {/*                  <a*/}
+          {/*                    href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"*/}
+          {/*                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"*/}
+          {/*                    rel="noopener noreferrer"*/}
+          {/*                    target="_blank"*/}
+          {/*                  />*/}
+          {/*                ),*/}
+          {/*              }}*/}
+          {/*            />*/}
+          {/*          </Disclosure.Panel>*/}
+          {/*        </Transition>*/}
+          {/*      </div>*/}
+          {/*    )}*/}
+          {/*  </Disclosure>*/}
+          {/*</div>*/}
+          {/*<div*/}
+          {/*  data-aos="fade-left"*/}
+          {/*  data-aos-duration="600"*/}
+          {/*  data-aos-delay="1300"*/}
+          {/*>*/}
+          {/*  <Disclosure>*/}
+          {/*    {({ open }) => (*/}
+          {/*      <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">*/}
+          {/*        <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">*/}
+          {/*          {t("What is zkSync?")}*/}
+          {/*          {open ? (*/}
+          {/*            <MinusIcon*/}
+          {/*              className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*              aria-hidden="true"*/}
+          {/*            />*/}
+          {/*          ) : (*/}
+          {/*            <PlusIcon*/}
+          {/*              className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*              aria-hidden="true"*/}
+          {/*            />*/}
+          {/*          )}*/}
+          {/*        </Disclosure.Button>*/}
+          {/*        <Transition*/}
+          {/*          show={open}*/}
+          {/*          enter="transition duration-300 ease-out"*/}
+          {/*          enterFrom="transform scale-95 opacity-0"*/}
+          {/*          enterTo="transform scale-100 opacity-100"*/}
+          {/*          leave="transition duration-200 ease-out"*/}
+          {/*          leaveFrom="transform scale-100 opacity-100"*/}
+          {/*          leaveTo="transform scale-95 opacity-0"*/}
+          {/*        >*/}
+          {/*          <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">*/}
+          {/*            <Trans*/}
+          {/*              t={t}*/}
+          {/*              i18nKey="zksync is a trustless protocol"*/}
+          {/*              components={{*/}
+          {/*                1: (*/}
+          {/*                  <a*/}
+          {/*                    href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"*/}
+          {/*                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"*/}
+          {/*                    rel="noopener noreferrer"*/}
+          {/*                    target="_blank"*/}
+          {/*                  />*/}
+          {/*                ),*/}
+          {/*              }}*/}
+          {/*            />*/}
+          {/*          </Disclosure.Panel>*/}
+          {/*        </Transition>*/}
+          {/*      </div>*/}
+          {/*    )}*/}
+          {/*  </Disclosure>*/}
+          {/*</div>*/}
+          {/*<div*/}
+          {/*  data-aos="fade-left"*/}
+          {/*  data-aos-duration="600"*/}
+          {/*  data-aos-delay="1500"*/}
+          {/*>*/}
+          {/*  <Disclosure>*/}
+          {/*    {({ open }) => (*/}
+          {/*      <div className="mt-5 text-left border-2 rounded-2xl  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200">*/}
+          {/*        <Disclosure.Button className="flex items-center justify-between w-full px-5 py-5 text-xl font-semibold text-left font-work  dark:hover:border-amber-400 border-slate-800 dark:border-slate-200 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200">*/}
+          {/*          {t("How can I start using ZigZag?")}*/}
+          {/*          {open ? (*/}
+          {/*            <MinusIcon*/}
+          {/*              className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*              aria-hidden="true"*/}
+          {/*            />*/}
+          {/*          ) : (*/}
+          {/*            <PlusIcon*/}
+          {/*              className="p-1 border rounded-full border-foreground-400 w-7 h-7"*/}
+          {/*              aria-hidden="true"*/}
+          {/*            />*/}
+          {/*          )}*/}
+          {/*        </Disclosure.Button>*/}
+          {/*        <Transition*/}
+          {/*          show={open}*/}
+          {/*          enter="transition duration-300 ease-out"*/}
+          {/*          enterFrom="transform scale-95 opacity-0"*/}
+          {/*          enterTo="transform scale-100 opacity-100"*/}
+          {/*          leave="transition duration-200 ease-out"*/}
+          {/*          leaveFrom="transform scale-100 opacity-100"*/}
+          {/*          leaveTo="transform scale-95 opacity-0"*/}
+          {/*        >*/}
+          {/*          <Disclosure.Panel className="px-5 pb-3 text-base font-normal leading-6 whitespace-pre-line font-work">*/}
+          {/*            <Trans*/}
+          {/*              t={t}*/}
+          {/*              i18nKey="To start using zigzag"*/}
+          {/*              components={{*/}
+          {/*                1: (*/}
+          {/*                  <a*/}
+          {/*                    href="https://twitter.com/zigzagkedar/status/1580249833352220673"*/}
+          {/*                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"*/}
+          {/*                    rel="noopener noreferrer"*/}
+          {/*                    target="_blank"*/}
+          {/*                  />*/}
+          {/*                ),*/}
+          {/*                2: (*/}
+          {/*                  <a*/}
+          {/*                    href="https://twitter.com/ZigZagExchange/status/1584945659664551936"*/}
+          {/*                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"*/}
+          {/*                    rel="noopener noreferrer"*/}
+          {/*                    target="_blank"*/}
+          {/*                  />*/}
+          {/*                ),*/}
+          {/*                3: (*/}
+          {/*                  <a*/}
+          {/*                    href="https://docs.zigzag.exchange/chains/zksync-1.0/zksync-1.0-guide"*/}
+          {/*                    className="text-[#57F287] !hover:text-red-900 font-work font-medium hover:underline-offset-2 hover:underline"*/}
+          {/*                    rel="noopener noreferrer"*/}
+          {/*                    target="_blank"*/}
+          {/*                  />*/}
+          {/*                ),*/}
+          {/*              }}*/}
+          {/*            />*/}
+          {/*            /!* {t("To start using zigzag")} *!/*/}
+          {/*          </Disclosure.Panel>*/}
+          {/*        </Transition>*/}
+          {/*      </div>*/}
+          {/*    )}*/}
+          {/*  </Disclosure>*/}
+          {/*</div>*/}
         </div>
       </section>
     );
