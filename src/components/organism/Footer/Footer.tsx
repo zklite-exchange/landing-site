@@ -35,8 +35,8 @@ const content = [
         url: "https://zksync.io/",
       },
       {
-        name: "StarkNet",
-        url: "https://starknet.io/",
+        name: "zkScan",
+        url: "https://zkscan.io/",
       },
       // {
       //   name: "CoinGecko",
