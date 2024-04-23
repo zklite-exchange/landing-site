@@ -5,12 +5,13 @@ import { VictoryLine } from "victory";
 import styles from "./priceCard.module.css";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-const MiniChart = dynamic(
-  () => import("react-ts-tradingview-widgets").then((w) => w.MiniChart),
+import { MiniChartProps } from "react-ts-tradingview-widgets";
+const MiniChart: ((props: MiniChartProps) => any) = dynamic(
+  (() => import("react-ts-tradingview-widgets").then((w) => w.MiniChart)) as any,
   {
     ssr: false,
   }
-);
+) as any;
 
 type priceCardProps = {
   className?: string;
