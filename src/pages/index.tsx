@@ -65,6 +65,9 @@ const Homepage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
+        <meta
+          name="twitter:widgets:theme"
+          content="dark" />
       </Head>
       <Header />
       <main className="container mx-auto px-2">

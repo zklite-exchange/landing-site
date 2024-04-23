@@ -71,7 +71,7 @@ const News = () => {
       <div className="grid gap-6 mt-16 lg:grid-cols-3 md:grid-cols-1 xl:gap-10">
         <div>
           <TwitterTweetEmbed
-            tweetId={"1677432469082218496"}
+            tweetId={"1778851424014671969"}
             options={{
               // cards: "hidden",
               height: 400,
@@ -88,7 +88,7 @@ const News = () => {
         </div>
         <div>
           <TwitterTweetEmbed
-            tweetId={"1669006479112716290"}
+            tweetId={"1779534741601132647"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...
@@ -99,7 +99,7 @@ const News = () => {
         </div>
         <div>
           <TwitterTweetEmbed
-            tweetId={"1631571511600373766"}
+            tweetId={"1778056992072065224"}
             placeholder={
               <div className="text-lg font-medium font-work text-slate-800 dark:text-slate-200">
                 Loading tweet...
@@ -125,19 +125,19 @@ const News = () => {
             </a>
           </div>
         )} */}
-        {data &&
-          data?.item.slice(0, 3).map((item: any, index: any) => {
-            return (
-              <div
-                data-aos="fade-up"
-                data-aos-duration="300"
-                data-aos-delay={100 * (index + 1)}
-                key={index}
-              >
-                <BlogItem data={item} {...data.profile} />
-              </div>
-            );
-          })}
+        {/*{data &&*/}
+        {/*  data?.item.slice(0, 3).map((item: any, index: any) => {*/}
+        {/*    return (*/}
+        {/*      <div*/}
+        {/*        data-aos="fade-up"*/}
+        {/*        data-aos-duration="300"*/}
+        {/*        data-aos-delay={100 * (index + 1)}*/}
+        {/*        key={index}*/}
+        {/*      >*/}
+        {/*        <BlogItem data={item} {...data.profile} />*/}
+        {/*      </div>*/}
+        {/*    );*/}
+        {/*  })}*/}
       </div>
     </section>
   );
