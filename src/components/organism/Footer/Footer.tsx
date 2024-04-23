@@ -15,19 +15,15 @@ const content = [
     items: [
       {
         name: "Documentation",
-        url: "https://docs.zigzag.exchange/",
+        url: "https://docs.zklite.io/",
       },
       {
         name: "Uptime Status",
-        url: "https://status.zigzag.exchange/",
+        url: "https://status.zklite.io//",
       },
       {
         name: "GitHub",
-        url: "https://github.com/ZigZagExchange",
-      },
-      {
-        name: "Blog",
-        url: "https://blog.zigzag.exchange/",
+        url: "https://github.com/zklite-exchange",
       },
     ],
   },
@@ -42,14 +38,14 @@ const content = [
         name: "StarkNet",
         url: "https://starknet.io/",
       },
-      {
-        name: "CoinGecko",
-        url: "https://www.coingecko.com/en/coins/zigzag",
-      },
-      {
-        name: "CoinMarketCap",
-        url: "https://coinmarketcap.com/currencies/zigzag/",
-      },
+      // {
+      //   name: "CoinGecko",
+      //   url: "https://www.coingecko.com/en/coins/zigzag",
+      // },
+      // {
+      //   name: "CoinMarketCap",
+      //   url: "https://coinmarketcap.com/currencies/zigzag/",
+      // },
     ],
   },
   {
@@ -57,19 +53,15 @@ const content = [
     items: [
       {
         name: "Twitter",
-        url: "https://twitter.com/ZigZagExchange",
+        url: "https://twitter.com/zklite_exchange",
       },
       {
         name: "Discord",
-        url: "https://discord.gg/znyRTSWTJQ",
+        url: "https://discord.gg/cQGuG2XX",
       },  
       {
         name: "Telegram",
-        url: "https://t.me/zigzagexchange",
-      },
-      {
-        name: "Forum",
-        url: "https://forum.zigzaglabs.io/",
+        url: "https://t.me/zklite_io",
       },
     ],
   },
@@ -88,21 +80,12 @@ const Footer = () => {
       >
         <div>
           <Link href="/" passHref={true}>
-            {theme === "dark" ? (
-              <Image
-                src="/assets/logo.png"
-                alt="Vercel Logo"
-                width={100}
-                height={32}
-              />
-            ) : (
-              <Image
-                src="/assets/logo-dark.png"
-                alt="Vercel Logo"
-                width={100}
-                height={32}
-              />
-            )}
+            <Image
+              src="/assets/logo.png"
+              alt="Vercel Logo"
+              width={100}
+              height={32}
+            />
           </Link>
           <p className="mt-5 font-normal leading-8 tracking-wide font-work text-slate-800 dark:text-slate-200">
             {t(
@@ -111,7 +94,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-10 mt-7">
             <a
-              href="https://twitter.com/ZigZagExchange"
+              href="https://twitter.com/zklite_exchange"
               className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
@@ -119,7 +102,7 @@ const Footer = () => {
               <BsTwitter className="w-6 h-6 cursor-pointer" />
             </a>
             <a
-              href="https://github.com/ZigZagExchange"
+              href="https://github.com/zklite-exchange"
               className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
@@ -127,7 +110,7 @@ const Footer = () => {
               <BsGithub className="w-6 h-6 cursor-pointer " />
             </a>
             <a
-              href="https://discord.gg/znyRTSWTJQ"
+              href="https://discord.com/invite/cQGuG2XX"
               className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
@@ -135,7 +118,7 @@ const Footer = () => {
               <BsDiscord className="w-6 h-6 cursor-pointer " />
             </a> 
             <a
-              href="https://t.me/zigzagexchange"
+              href="https://t.me/zklite_io"
               className=" text-base !font-light font-work dark:hover:text-amber-400 text-slate-800 dark:text-slate-200"
               rel="noopener noreferrer"
               target="_blank"
@@ -171,7 +154,7 @@ const Footer = () => {
       </div>
       <div className="py-10 text-center">
         <p className="font-normal font-work text-slate-600 dark:text-slate-400">
-          © 2023 ZigZag. All rights reserved.
+          © 2024 zkLite Exchange. All rights reserved.
         </p>
       </div>
     </div>
