@@ -50,30 +50,18 @@ const languages = [
   },
 ];
 
-const supportOptions = [
-  { value: "https://docs.zigzag.exchange/", label: "Documents" },
-  { value: "https://discord.gg/znyRTSWTJQ", label: "Community Support" }, 
-  { value: "https://forum.zigzaglabs.io/", label: "Governance" },
-];
-
 const mobileOptions = [
   {
     value: "documents",
     label: "Documents",
-    url: "https://docs.zigzag.exchange/",
+    url: "https://docs.zklite.io/",
   },
   {
     value: "community",
     label: "Community Support",
-    url: "https://discord.gg/znyRTSWTJQ",
-  }, 
-  {
-    value: "governance",
-    label: "Governance",
-    url: "https://forum.zigzaglabs.io/",
+    url: "https://t.me/zklite_io",
   },
-  { value: "blog", label: "Blog", url: "https://blog.zigzag.exchange/" },
-  { value: "contact", label: "Contact", url: "/contact" },
+  { value: "contact", label: "Contact", url: "mailto:contact@zklite.io" },
 ];
 
 /** Make sure to pass GLOSSARY_TNS and COMMON_TNS to where it is called */
@@ -86,7 +74,6 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   const [isMounted, setIsMounted] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
-  const [supportMenu, setSupportMenu] = useState(supportOptions);
   const [mobileSupportMenu, setMobileSupportMenu] = useState(mobileOptions);
 
   useEffect(() => {
@@ -96,10 +83,6 @@ export const Header: React.FC<HeaderProps> = (props) => {
   useEffect(() => {
     const p: any = languages.find((lng) => lng.code === locale);
     setSelected(p);
-    const support: any = supportOptions.map((item) => {
-      return { ...item, label: t(item.label) };
-    });
-    setSupportMenu(support);
     const mobileSupport: any = mobileOptions.map((item) => {
       return { ...item, label: t(item.label) };
     });
@@ -130,41 +113,28 @@ export const Header: React.FC<HeaderProps> = (props) => {
         <div className="flex items-center justify-between h-20 m-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl ">
           <div className="flex items-center ">
             <Link href="/" passHref={true}>
-              {theme === "dark" ? (
-                <Image
-                  src="/assets/logo.png"
-                  alt="Vercel Logo"
-                  width={100}
-                  height={32}
-                />
-              ) : (
-                <Image
-                  src="/assets/logo-dark.png"
-                  alt="Vercel Logo"
-                  width={100}
-                  height={32}
-                />
-              )}
+              <Image
+                src="/assets/logo.png"
+                alt="Vercel Logo"
+                width={100}
+                height={32}
+              />
             </Link>
             {/* <Dropdown
               btnText={t("fiat")}
               options={fiatOptions}
               className="hidden lg:ml-4 xl:ml-7 lg:block"
             /> */}
-            <Dropdown
-              btnText={t("Support")}
-              options={supportMenu}
-              className="hidden lg:ml-0 xl:ml-7 lg:block"
-            />
             <LinkText
-              href="https://blog.zigzag.exchange/"
-              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 lg:ml-0 xl:ml-7 font-work lg:block hover:underline hover:underline-offset-2"
+              href="https://docs.zklite.io"
               target="_blank"
+              className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
             >
-              {t("Blog")}
+              {t("Documents")}
             </LinkText>
             <LinkText
               href="/contact"
+              target="_blank"
               className="hidden py-2 text-sm font-semibold leading-6 dark:hover:text-amber-400 text-slate-800 dark:text-slate-200 lg:ml-4 xl:ml-10 font-work lg:block hover:underline hover:underline-offset-2"
             >
               {t("Contact")}
@@ -181,7 +151,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <div className="flex items-center justify-center ">
             <div className="hidden gap-6 mt-1 lg:flex">
               <a
-                href="https://twitter.com/ZigZagExchange"
+                href="https://twitter.com/zklite_exchange"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -191,7 +161,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 />
               </a>
               <a
-                href="https://github.com/ZigZagExchange"
+                href="https://github.com/zklite-exchange"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -201,7 +171,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 />
               </a>
                <a
-                href="https://discord.gg/znyRTSWTJQ"
+                href="https://discord.gg/cQGuG2XX"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -212,7 +182,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               </a> 
 
               <a
-                href="https://t.me/zigzagexchange"
+                href="https://t.me/zklite_io"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -304,7 +274,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
             <div>
               <a
-                href="https://trade.zigzag.exchange/"
+                href="https://trade.zklite.io/"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="!hover:no-underline"

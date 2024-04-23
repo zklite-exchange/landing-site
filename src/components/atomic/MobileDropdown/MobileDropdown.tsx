@@ -76,7 +76,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
             className="flex justify-between mx-4 my-4"
           >
             <a
-              href="https://twitter.com/ZigZagExchange"
+              href="https://twitter.com/zklite_exchange"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -86,7 +86,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
               />
             </a>
             <a
-              href="https://github.com/ZigZagExchange"
+              href="https://github.com/zklite-exchange"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -96,7 +96,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
               />
             </a>
             <a
-              href="https://discord.gg/znyRTSWTJQ"
+              href="https://discord.gg/cQGuG2XX"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -107,7 +107,7 @@ export default function Dropdown({ options, className }: MobileDropdownProps) {
             </a> 
 
             <a
-              href="https://t.me/zigzagexchange"
+              href="https://t.me/zklite_io"
               rel="noopener noreferrer"
               target="_blank"
             >
