@@ -69,53 +69,7 @@ const Hello = ({ onClickRollupBtn }: props) => {
             {t("Trade on zkSync Lite")}
           </Button>
         </a>
-        {/* <a*/}
-        {/*  href="https://zap.zigzag.exchange/"*/}
-        {/*  rel="noopener noreferrer"*/}
-        {/*  target="_blank"*/}
-        {/*  className="!hover:no-underline"*/}
-        {/*>*/}
-        {/*  <Button*/}
-        {/*    className="px-2 py-2.5 text-base font-semibold font-work md:w-100 hover:no-underline"*/}
-        {/*    type="gradient"*/}
-        {/*  >*/}
-        {/*    {t("Cross chain Swap with ZAP")}*/}
-        {/*  </Button>*/}
-        {/*</a>*/}
-        {/* <a
-          href="https://arbitrum.zigzag.exchange/"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="!hover:no-underline"
-        >
-          <Button
-            className="px-6 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
-            type="gradient"
-          >
-            {t("Trade on Arbitrum")}
-          </Button>
-        </a> */}
       </div>
-
-      {/* <div
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="600"
-        className="flex flex-col items-center justify-center gap-4 mx-16 mt-8 text-center md:mx-0 md:flex-row"
-      >
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          className="!hover:no-underline"
-        >
-          <Button
-            className="px-3 py-2.5 text-base font-semibold  font-work md:w-100 hover:no-underline"
-            type="gradient"
-          >
-            {t("INVISIBL3: DEX + Perps for professionals that want privacy, low fees & fast transactions (Coming Soon)")}
-          </Button>
-        </a>
-      </div> */}
 
       {
         isXl
@@ -178,8 +132,6 @@ const Hello = ({ onClickRollupBtn }: props) => {
             <PriceCardTradingView symbol="BNBUSD" />
           </div>
       }
-
-
     </section>
   );
 };
