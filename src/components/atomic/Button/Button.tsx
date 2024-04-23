@@ -23,7 +23,7 @@ const Button = ({
       className={classNames(
         className,
         type === "gradient" && styles.button,
-        "px-4 py-2 block text-foreground-900 font-extrabold font-work"
+        "px-4 py-2 block text-foreground-900"
       )}
       onClick={onClick}
       disabled={disabled}

@@ -17,7 +17,9 @@ const StepTwo = ({ className }: any) => {
         {t("Step 2")}
       </p>
       <p className="mt-2 text-base font-normal leading-6 text-left font-work text-slate-600 dark:text-slate-400">
-        {t("Migrate funds over via the ZigZag bridge.")}
+        <a href='https://lite.zksync.io' className='dark:hover:text-amber-400 hover:text-amber-400'>
+          {t("Migrate funds over via the ZigZag bridge.")}
+        </a>
       </p>
       <div className="mt-4 text-left bg-[url('/assets/swap1.png')] h-44 bg-cover bg-no-repeat">
         {/* <Image
