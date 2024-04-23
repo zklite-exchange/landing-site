@@ -9,7 +9,8 @@
     "start": "cross-env NODE_ENV=production node server/index.js",
     "test": "jest --watch",
     "test:once": "jest --verbose",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pm2": "pm2"
   },
   "dependencies": {
     "@formspree/react": "^2.4.1",
