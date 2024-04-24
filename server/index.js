@@ -27,6 +27,12 @@ app
       return handle(req, res);
     });
 
+    server.post('/', (req, res) => {
+      res.status(204);
+      res.header('Cache-Control', 'no-cache');
+      res.send('')
+    })
+
     server.listen(PORT, (err) => {
       if (err) throw err;
       console.log(`> Ready on ${PORT}`);
