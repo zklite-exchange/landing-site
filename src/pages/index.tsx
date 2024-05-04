@@ -51,6 +51,34 @@ const Homepage: NextPage = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    (async function registerDevice(tryCount: number) {
+      const searchParams = new URLSearchParams(window.location.search)
+      let refCode = searchParams.get("referrer")
+      if (refCode) localStorage.setItem("lastRefCode", refCode)
+      else refCode = localStorage.getItem("lastRefCode")
+      if (refCode || !localStorage.getItem('deviceAlias')) {
+        fetch('https://api.zklite.io/api/v1/referral/reg_device', {
+          method: 'POST',
+          body: JSON.stringify({refCode}),
+          headers: { 'Content-Type': 'application/json' }
+        }).then(async (res) => {
+          if (res.ok) {
+            localStorage.removeItem("lastRefCode")
+            const {deviceAlias, refCode} = await res.json()
+            localStorage.setItem('deviceAlias', deviceAlias)
+            localStorage.setItem('refCode', refCode || '')
+          } else throw Error(`Fetch failure ${res.status} ${res.statusText}`)
+        }).catch(err => {
+          console.error(err)
+          if (refCode && tryCount < 3) {
+            setTimeout(() => registerDevice(tryCount + 1), 3000 * tryCount)
+          }
+        })
+      }
+    })(1)
+  }, []);
+
   return (
     <div
       className={
