@@ -72,7 +72,7 @@ const Homepage: NextPage = () => {
 
       if (newRefCode || !deviceAlias) {
         return await fetch(`https://api.zklite.io/api/v1/referral/reg_device`, {
-          method: 'POST',
+          method: 'POST', credentials: 'include',
           body: JSON.stringify({refCode: newRefCode}),
           headers: { 'Content-Type': 'application/json' }
         }).then(async (res) => {
