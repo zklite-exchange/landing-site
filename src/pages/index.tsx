@@ -53,25 +53,41 @@ const Homepage: NextPage = () => {
 
   useEffect(() => {
     (async function registerDevice(tryCount: number) {
+      let keyNewRefCode = 'newRefCode';
+      let keyDeviceAlias = 'deviceAlias';
+      let keyRefCode = 'refCode';
+
       const searchParams = new URLSearchParams(window.location.search)
-      let refCode = searchParams.get("referrer")
-      if (refCode) localStorage.setItem("lastRefCode", refCode)
-      else refCode = localStorage.getItem("lastRefCode")
-      if (refCode || !localStorage.getItem('deviceAlias')) {
-        fetch('https://api.zklite.io/api/v1/referral/reg_device', {
+      let newRefCode = searchParams.get("referrer")
+
+      if (newRefCode) localStorage.setItem(keyNewRefCode, newRefCode)
+      else newRefCode = localStorage.getItem(keyNewRefCode)
+
+      let deviceAlias = localStorage.getItem(keyDeviceAlias)
+      let refCode = localStorage.getItem(keyRefCode)
+      if (refCode && newRefCode === refCode) {
+        localStorage.removeItem(keyNewRefCode)
+        newRefCode = null;
+      }
+
+      if (newRefCode || !deviceAlias) {
+        return await fetch(`https://api.zklite.io/api/v1/referral/reg_device`, {
           method: 'POST',
-          body: JSON.stringify({refCode}),
+          body: JSON.stringify({refCode: newRefCode}),
           headers: { 'Content-Type': 'application/json' }
         }).then(async (res) => {
           if (res.ok) {
-            localStorage.removeItem("lastRefCode")
+            localStorage.removeItem(keyNewRefCode)
             const {deviceAlias, refCode} = await res.json()
-            localStorage.setItem('deviceAlias', deviceAlias)
-            localStorage.setItem('refCode', refCode || '')
+            localStorage.setItem(keyDeviceAlias, deviceAlias)
+            refCode
+              ? localStorage.setItem(keyRefCode, refCode)
+              : localStorage.removeItem(keyRefCode)
+            return {deviceAlias, refCode}
           } else throw Error(`Fetch failure ${res.status} ${res.statusText}`)
         }).catch(err => {
           console.error(err)
-          if (refCode && tryCount < 3) {
+          if (newRefCode && tryCount < 3) {
             setTimeout(() => registerDevice(tryCount + 1), 3000 * tryCount)
           }
         })
