@@ -108,8 +108,16 @@ const Homepage: NextPage = () => {
         <meta name="description" content="An order-book DEX on zkSync Lite" />
         <meta property="og:title" content="zkLite Exchange" />
         <meta property="og:description" content="An order-book DEX on zkSync Lite" />
-        <meta property="og:image" content="/assets/wide_banner.png" />
-        
+        <meta property="og:image" content="https://zklite.io/assets/wide_banner.png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="zklite.io" />
+        <meta property="twitter:url" content="https://zklite.io" />
+        <meta name="twitter:title" content="zkLite Exchange" />
+        <meta name="twitter:description" content="An order-book DEX on zkSync Lite" />
+        <meta name="twitter:image" content="https://zklite.io/assets/wide_banner.png" />
+
         <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png" />
@@ -130,6 +138,14 @@ const Homepage: NextPage = () => {
         <meta
           name="twitter:widgets:theme"
           content="dark" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-438LLHN1EB"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-438LLHN1EB');
+        </script>
       </Head>
       <Header />
       <main className="container mx-auto px-2">
