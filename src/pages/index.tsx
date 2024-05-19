@@ -95,6 +95,18 @@ const Homepage: NextPage = () => {
     })(1)
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      const search = new URLSearchParams(window.location.search)
+      if (search.has("_gl")) {
+        search.delete("_gl");
+        let searchStr = search.toString()
+        if (searchStr) searchStr = '?' + searchStr;
+        history.replaceState({}, "", window.location.pathname + searchStr);
+      }
+    }, 100)
+  }, []);
+
   return (
     <div
       className={
