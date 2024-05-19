@@ -141,10 +141,10 @@ const Homepage: NextPage = () => {
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-438LLHN1EB"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-438LLHN1EB');
+          {"window.dataLayer = window.dataLayer || [];\n" +
+            "function gtag(){dataLayer.push(arguments);}\n" +
+            "gtag('js', new Date());\n" +
+            "gtag('config', 'G-438LLHN1EB');"}
         </script>
       </Head>
       <Header />
